@@ -235,7 +235,10 @@ class CoinWrapperSellSignal extends React.Component {
           {sell.currentProfit ? (
             <div className='coin-info-column coin-info-column-price'>
               <span className='coin-info-label'>Profit/Loss:</span>
-              <HightlightChange className='coin-info-value'>
+              <HightlightChange
+                className={`coin-info-value ${
+                  parseFloat(sell.currentProfit) >= 0 ? 'positive' : 'negative'
+                }`}>
                 {parseFloat(sell.currentProfit).toFixed(precision)} {quoteAsset}{' '}
                 ({parseFloat(sell.currentProfitPercentage).toFixed(2)}
                 %)

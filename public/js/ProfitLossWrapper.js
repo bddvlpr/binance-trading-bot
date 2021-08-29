@@ -129,7 +129,10 @@ class ProfitLossWrapper extends React.Component {
           className='profit-loss-wrapper pt-2 pl-2 pr-2 pb-0'>
           <div className='profit-loss-wrapper-body'>
             <span className='profit-loss-asset'>{pnl.asset}</span>{' '}
-            <span className='profit-loss-value'>
+            <span
+              className={`profit-loss-value ${
+                pnl.profit >= 0 ? 'positive' : 'negative'
+              }`}>
               {pnl.profit > 0 ? '+' : ''}
               {pnl.profit.toFixed(5)}
               <br />({percentage}%)
@@ -156,7 +159,10 @@ class ProfitLossWrapper extends React.Component {
                 />
                 ({stat.trades})
               </div>{' '}
-              <div className='profit-loss-value'>
+              <div
+                className={`profit-loss-value ${
+                  stat.profit >= 0 ? 'positive' : 'negative'
+                }`}>
                 {stat.profit > 0 ? '+' : ''}
                 {stat.profit.toFixed(5)}
                 <br />({stat.profitPercentage.toFixed(2)}%)
