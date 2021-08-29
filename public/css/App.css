@@ -771,6 +771,14 @@ input[type='number'] {
   line-height: 1.5;
 }
 
+.positive {
+  color: #02c076;
+}
+
+.negative {
+  color: #f84960;
+}
+
 /**
   End: Profit Loss
 */
