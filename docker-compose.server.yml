@@ -3,7 +3,7 @@ version: '3.7'
 services:
   binance-bot:
     container_name: binance-bot
-    image: chrisleekr/binance-trading-bot:latest
+    image: baddeveloper/binance-trading-bot:latest
     networks:
       - internal
     env_file:
