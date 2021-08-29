@@ -1,8 +1,8 @@
-name: Release & Docker
+name: Release and docker
 
 on:
   repository_dispatch:
-    types: [Release & Docker]
+    types: [release]
 
 jobs:
   create-release:
@@ -64,5 +64,5 @@ jobs:
             GIT_HASH=${{ env.GIT_HASH }}
             NODE_ENV=production
           tags: |
-            chrisleekr/binance-trading-bot:latest
-            chrisleekr/binance-trading-bot:${{ env.PACKAGE_VERSION }}
+            baddeveloper/binance-trading-bot:latest
+            baddeveloper/binance-trading-bot:${{ env.PACKAGE_VERSION }}
